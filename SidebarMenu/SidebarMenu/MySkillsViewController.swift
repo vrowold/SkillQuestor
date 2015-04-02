@@ -10,6 +10,8 @@ import UIKit
 
 class MySkillsViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
+    
+    var dataArray: [String] = ["Basketball","Chess","Guitar","Painting","Drawing","Tennis","Soccer","Bowling"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,9 +137,11 @@ class MySkillsViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+            if let destinationVC = segue.destinationViewController as? PhotoViewController{
+                var indexPath = self.tableView.indexPathForSelectedRow()
+                
+                destinationVC.data = "STRINGGGGGG"//self.dataArray[indexPath!.row]
+            }
     }
     
 

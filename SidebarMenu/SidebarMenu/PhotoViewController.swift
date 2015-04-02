@@ -12,6 +12,10 @@ class PhotoViewController: UIViewController {
     
     var timer = NSTimer()
     var startTime = NSTimeInterval()
+    var data = String()
+    
+    @IBOutlet weak var skillLabel: UILabel!
+
     
     @IBOutlet weak var menuButton:UIBarButtonItem!
     
@@ -35,6 +39,8 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.skillLabel.text = self.data
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()

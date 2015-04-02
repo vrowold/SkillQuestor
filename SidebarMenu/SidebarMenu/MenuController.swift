@@ -25,6 +25,9 @@ class MenuController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    /*@IBAction func btnDisplayRecordClicked(sender: AnyObject) {
+        ModelManager.instance.getAllSkills()
+    } */
 
     
     // MARK: - Table view data source

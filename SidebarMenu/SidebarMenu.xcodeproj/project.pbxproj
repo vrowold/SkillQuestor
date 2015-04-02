@@ -10,19 +10,18 @@
 		37897E0A1ACBB19E004C5970 /* PracticeHistoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37897E091ACBB19E004C5970 /* PracticeHistoryViewCell.swift */; };
 		37897E0E1ACBB1FC004C5970 /* PracticeHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37897E0D1ACBB1FC004C5970 /* PracticeHistoryViewController.swift */; };
 		37897E101ACBE10A004C5970 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37897E0F1ACBE10A004C5970 /* libsqlite3.dylib */; };
-		37897E161ACBE745004C5970 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37897E151ACBE745004C5970 /* Skill.swift */; };
-		37897E201ACBE99C004C5970 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 37897E1A1ACBE99C004C5970 /* FMDatabase.m */; };
-		37897E211ACBE99C004C5970 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37897E1C1ACBE99C004C5970 /* FMDatabaseAdditions.m */; };
-		37897E221ACBE99C004C5970 /* fmdb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37897E1D1ACBE99C004C5970 /* fmdb.txt */; };
-		37897E231ACBE99C004C5970 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 37897E1F1ACBE99C004C5970 /* FMResultSet.m */; };
+		37897E161ACBE745004C5970 /* UserSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37897E151ACBE745004C5970 /* UserSkill.swift */; };
 		37897E261ACBEA54004C5970 /* sqdatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 37897E251ACBEA54004C5970 /* sqdatabase.sql */; };
 		37897E291ACBEB42004C5970 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37897E281ACBEB42004C5970 /* Util.swift */; };
 		37897E2B1ACBEB96004C5970 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37897E2A1ACBEB96004C5970 /* ModelManager.swift */; };
-		37897E311ACBEF00004C5970 /* lklk.m in Sources */ = {isa = PBXBuildFile; fileRef = 37897E301ACBEF00004C5970 /* lklk.m */; };
 		37B3B13E1ACA6A0100DEEDD2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B3B13D1ACA6A0100DEEDD2 /* MapKit.framework */; };
 		37B3B1401ACA790300DEEDD2 /* ResourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3B13F1ACA790300DEEDD2 /* ResourceController.swift */; };
 		37B3B1461ACB883A00DEEDD2 /* MySkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3B1451ACB883A00DEEDD2 /* MySkillsViewController.swift */; };
 		37B3B1481ACB884000DEEDD2 /* MySkillsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B3B1471ACB884000DEEDD2 /* MySkillsViewCell.swift */; };
+		37FC236A1ACBFD450005FB9A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC23641ACBFD450005FB9A /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		37FC236B1ACBFD450005FB9A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC23661ACBFD450005FB9A /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		37FC236C1ACBFD450005FB9A /* fmdb.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37FC23671ACBFD450005FB9A /* fmdb.txt */; };
+		37FC236D1ACBFD450005FB9A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FC23691ACBFD450005FB9A /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		64EB71D61AB6A3250094F54C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EB71D51AB6A3250094F54C /* SWRevealViewController.m */; };
 		F47029F61A7F27DB00E30A3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47029F51A7F27DB00E30A3C /* AppDelegate.swift */; };
 		F47029FB1A7F27DB00E30A3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47029F91A7F27DB00E30A3C /* Main.storyboard */; };
@@ -50,23 +49,22 @@
 		37897E091ACBB19E004C5970 /* PracticeHistoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeHistoryViewCell.swift; sourceTree = "<group>"; };
 		37897E0D1ACBB1FC004C5970 /* PracticeHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticeHistoryViewController.swift; sourceTree = "<group>"; };
 		37897E0F1ACBE10A004C5970 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		37897E151ACBE745004C5970 /* Skill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
-		37897E191ACBE99C004C5970 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		37897E1A1ACBE99C004C5970 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		37897E1B1ACBE99C004C5970 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		37897E1C1ACBE99C004C5970 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		37897E1D1ACBE99C004C5970 /* fmdb.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fmdb.txt; sourceTree = "<group>"; };
-		37897E1E1ACBE99C004C5970 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		37897E1F1ACBE99C004C5970 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		37897E151ACBE745004C5970 /* UserSkill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSkill.swift; sourceTree = "<group>"; };
 		37897E251ACBEA54004C5970 /* sqdatabase.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = sqdatabase.sql; sourceTree = "<group>"; };
 		37897E281ACBEB42004C5970 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Util.swift; path = ../Util.swift; sourceTree = "<group>"; };
 		37897E2A1ACBEB96004C5970 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		37897E2E1ACBED4D004C5970 /* SidebarMenu-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SidebarMenu-Bridging-Header.h"; sourceTree = "<group>"; };
-		37897E301ACBEF00004C5970 /* lklk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lklk.m; sourceTree = "<group>"; };
 		37B3B13D1ACA6A0100DEEDD2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37B3B13F1ACA790300DEEDD2 /* ResourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceController.swift; sourceTree = "<group>"; };
 		37B3B1451ACB883A00DEEDD2 /* MySkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySkillsViewController.swift; sourceTree = "<group>"; };
 		37B3B1471ACB884000DEEDD2 /* MySkillsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySkillsViewCell.swift; sourceTree = "<group>"; };
+		37FC23631ACBFD450005FB9A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		37FC23641ACBFD450005FB9A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		37FC23651ACBFD450005FB9A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		37FC23661ACBFD450005FB9A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		37FC23671ACBFD450005FB9A /* fmdb.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fmdb.txt; sourceTree = "<group>"; };
+		37FC23681ACBFD450005FB9A /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		37FC23691ACBFD450005FB9A /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		64EB71D41AB6A3250094F54C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		64EB71D51AB6A3250094F54C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F47029F01A7F27DB00E30A3C /* SidebarMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SidebarMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,28 +103,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37897E171ACBE99C004C5970 /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-				37897E181ACBE99C004C5970 /* FMDB */,
-			);
-			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		37897E181ACBE99C004C5970 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-				37897E191ACBE99C004C5970 /* FMDatabase.h */,
-				37897E1A1ACBE99C004C5970 /* FMDatabase.m */,
-				37897E1B1ACBE99C004C5970 /* FMDatabaseAdditions.h */,
-				37897E1C1ACBE99C004C5970 /* FMDatabaseAdditions.m */,
-				37897E1D1ACBE99C004C5970 /* fmdb.txt */,
-				37897E1E1ACBE99C004C5970 /* FMResultSet.h */,
-				37897E1F1ACBE99C004C5970 /* FMResultSet.m */,
-			);
-			path = FMDB;
-			sourceTree = "<group>";
-		};
 		37897E271ACBEB19004C5970 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +116,21 @@
 				F491E7541A7F7E010026528E /* PhotoViewController.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		37FC23621ACBFD450005FB9A /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				37FC23631ACBFD450005FB9A /* FMDatabase.h */,
+				37FC23641ACBFD450005FB9A /* FMDatabase.m */,
+				37FC23651ACBFD450005FB9A /* FMDatabaseAdditions.h */,
+				37FC23661ACBFD450005FB9A /* FMDatabaseAdditions.m */,
+				37FC23671ACBFD450005FB9A /* fmdb.txt */,
+				37FC23681ACBFD450005FB9A /* FMResultSet.h */,
+				37FC23691ACBFD450005FB9A /* FMResultSet.m */,
+			);
+			name = FMDB;
+			path = ../FMDB;
 			sourceTree = "<group>";
 		};
 		64EB71D21AB6A2B70094F54C /* SWRevealViewController */ = {
@@ -183,13 +174,12 @@
 				F47029FE1A7F27DB00E30A3C /* LaunchScreen.xib */,
 				F47029F31A7F27DB00E30A3C /* Supporting Files */,
 				F4702A171A7F351C00E30A3C /* MenuController.swift */,
-				37897E301ACBEF00004C5970 /* lklk.m */,
+				37FC23621ACBFD450005FB9A /* FMDB */,
 				37897E281ACBEB42004C5970 /* Util.swift */,
 				37B3B13F1ACA790300DEEDD2 /* ResourceController.swift */,
-				37897E151ACBE745004C5970 /* Skill.swift */,
+				37897E151ACBE745004C5970 /* UserSkill.swift */,
 				37897E2E1ACBED4D004C5970 /* SidebarMenu-Bridging-Header.h */,
 				37897E251ACBEA54004C5970 /* sqdatabase.sql */,
-				37897E171ACBE99C004C5970 /* ThirdParty */,
 			);
 			path = SidebarMenu;
 			sourceTree = "<group>";
@@ -309,7 +299,7 @@
 				F4702A001A7F27DC00E30A3C /* LaunchScreen.xib in Resources */,
 				F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */,
 				37897E261ACBEA54004C5970 /* sqdatabase.sql in Resources */,
-				37897E221ACBE99C004C5970 /* fmdb.txt in Resources */,
+				37FC236C1ACBFD450005FB9A /* fmdb.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,15 +318,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				64EB71D61AB6A3250094F54C /* SWRevealViewController.m in Sources */,
-				37897E161ACBE745004C5970 /* Skill.swift in Sources */,
+				37897E161ACBE745004C5970 /* UserSkill.swift in Sources */,
 				F4702A181A7F351C00E30A3C /* MenuController.swift in Sources */,
-				37897E201ACBE99C004C5970 /* FMDatabase.m in Sources */,
 				37897E0E1ACBB1FC004C5970 /* PracticeHistoryViewController.swift in Sources */,
-				37897E311ACBEF00004C5970 /* lklk.m in Sources */,
+				37FC236B1ACBFD450005FB9A /* FMDatabaseAdditions.m in Sources */,
 				37897E2B1ACBEB96004C5970 /* ModelManager.swift in Sources */,
+				37FC236D1ACBFD450005FB9A /* FMResultSet.m in Sources */,
 				F47029F61A7F27DB00E30A3C /* AppDelegate.swift in Sources */,
 				37897E291ACBEB42004C5970 /* Util.swift in Sources */,
-				37897E231ACBE99C004C5970 /* FMResultSet.m in Sources */,
 				37897E0A1ACBB19E004C5970 /* PracticeHistoryViewCell.swift in Sources */,
 				37B3B1461ACB883A00DEEDD2 /* MySkillsViewController.swift in Sources */,
 				F491E74C1A7F4C630026528E /* NewsTableViewCell.swift in Sources */,
@@ -345,7 +334,7 @@
 				F491E74A1A7F4B300026528E /* NewsTableViewController.swift in Sources */,
 				F491E7551A7F7E010026528E /* PhotoViewController.swift in Sources */,
 				37B3B1401ACA790300DEEDD2 /* ResourceController.swift in Sources */,
-				37897E211ACBE99C004C5970 /* FMDatabaseAdditions.m in Sources */,
+				37FC236A1ACBFD450005FB9A /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = SidebarMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = SidebarMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

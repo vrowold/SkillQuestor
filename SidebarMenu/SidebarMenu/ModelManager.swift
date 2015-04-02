@@ -22,39 +22,40 @@ class ModelManager: NSObject {
         return sharedInstance
     }
     
-  /*  func addStudentData(studentInfo: StudentInfo) -> Bool {
+    func addSkill(userSkill: UserSkill) -> Bool {
         sharedInstance.database!.open()
-        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO StudentInfo (student_rollno, student_name) VALUES (?, ?)", withArgumentsInArray: [studentInfo.studentRollNo, studentInfo.studentName])
+        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO user_skills (userid, skillid) VALUES (?, ?)", withArgumentsInArray: [1, userSkill.skillid])
         sharedInstance.database!.close()
         return isInserted
     }
-   
+   /*
     func updateStudentData(studentInfo: StudentInfo) -> Bool {
         sharedInstance.database!.open()
         let isUpdated = sharedInstance.database!.executeUpdate("UPDATE StudentInfo SET student_name=? WHERE student_rollno=?", withArgumentsInArray: [studentInfo.studentName, studentInfo.studentRollNo])
         sharedInstance.database!.close()
         return isUpdated
     }
+    */
     
-    func deleteStudentData(studentInfo: StudentInfo) -> Bool {
+    func deleteSkill(userSkill: UserSkill) -> Bool {
         sharedInstance.database!.open()
-        let isDeleted = sharedInstance.database!.executeUpdate("DELETE FROM StudentInfo WHERE student_rollno=?", withArgumentsInArray: [studentInfo.studentRollNo])
+        let isDeleted = sharedInstance.database!.executeUpdate("DELETE FROM user_skills WHERE skillid=?", withArgumentsInArray: [userSkill.skillid])
         sharedInstance.database!.close()
         return isDeleted
     }
 
-    func getAllStudentData() {
+    func getAllSkills() {
         sharedInstance.database!.open()
-        var resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM StudentInfo", withArgumentsInArray: nil)
-        var rollNoColumn: String = "student_rollno"
-        var nameColumn: String = "student_name"
+        var resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM user_skills", withArgumentsInArray: nil)
+        var useridColumn: String = "userid"
+        var skillidColumn: String = "skillid"
         if (resultSet != nil) {
             while resultSet.next() {
-                println("roll no : \(resultSet.stringForColumn(rollNoColumn))")
-                println("name : \(resultSet.stringForColumn(nameColumn))")
+                println("userid : \(resultSet.stringForColumn(useridColumn))")
+                println("skillid : \(resultSet.stringForColumn(skillidColumn))")
             }
         }
         sharedInstance.database!.close()
     }
-    */
+    
 }

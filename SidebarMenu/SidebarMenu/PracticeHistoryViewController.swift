@@ -11,6 +11,7 @@ import UIKit
 class PracticeHistoryViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
 
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,40 +55,57 @@ class PracticeHistoryViewController: UITableViewController {
 
         // Configure the cell...
         if indexPath.row == 0 {
-            cell.authorLabel.text = "Basketball"
-            cell.authorImageView.image = UIImage(named: "basketball_icon")
+            cell.authorLabel.text = "Guitar"
+            cell.authorImageView.image = UIImage(named: "guitar_icon")
+            cell.dateLabel.text = "4/1"
+            cell.timeLabel.text = "8 min"
         } else if indexPath.row == 1 {
-            cell.authorLabel.text = "Chess"
-            cell.authorImageView.image = UIImage(named: "chess_icon")
+            cell.authorLabel.text = "Guitar"
+            cell.authorImageView.image = UIImage(named: "guitar_icon")
+            cell.dateLabel.text = "4/1"
+            cell.timeLabel.text = "34 min"
             
         } else if indexPath.row == 2 {
             cell.authorLabel.text = "Guitar"
             cell.authorImageView.image = UIImage(named: "guitar_icon")
+            cell.dateLabel.text = "3/31"
+            cell.timeLabel.text = "45 min"
             
         }else if indexPath.row == 3 {
             cell.authorLabel.text = "Painting"
             cell.authorImageView.image = UIImage(named: "painting_icon")
+            cell.dateLabel.text = "3/31"
+            cell.timeLabel.text = "12 min"
             
         }else if indexPath.row == 4 {
             cell.authorLabel.text = "Drawing"
             cell.authorImageView.image = UIImage(named: "drawing_icon")
+            cell.dateLabel.text = "3/30"
+            cell.timeLabel.text = "15 min"
             
         }else if indexPath.row == 5 {
             cell.authorLabel.text = "Tennis"
             cell.authorImageView.image = UIImage(named: "tennis_icon")
+            cell.dateLabel.text = "3/29"
+            cell.timeLabel.text = "50 min"
             
         }else if indexPath.row == 6 {
             cell.authorLabel.text = "Soccer"
             cell.authorImageView.image = UIImage(named: "soccer_icon")
+            cell.dateLabel.text = "3/29"
+            cell.timeLabel.text = "18 min"
             
         }else if indexPath.row == 7 {
             cell.authorLabel.text = "Bowling"
             cell.authorImageView.image = UIImage(named: "bowling_icon")
-            
+            cell.dateLabel.text = "3/29"
+            cell.timeLabel.text = "23 min"
         }else {
  
             cell.authorLabel.text = "Billiards"
             cell.authorImageView.image = UIImage(named: "pool_icon")
+            cell.dateLabel.text = "3/29"
+            cell.timeLabel.text = "30 min"
             
         }
         return cell

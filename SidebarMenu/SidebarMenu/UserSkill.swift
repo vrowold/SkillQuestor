@@ -8,9 +8,7 @@
 
 import Foundation
 
-/*class Skill: NSObject {
-    var skillid: Int
-    var name: String = String()
-    var descr: String = String()
-    var iconprefix: String = String()
-}*/
+class UserSkill: NSObject {
+    var userid: Int = 0
+    var skillid: Int = 0
+}

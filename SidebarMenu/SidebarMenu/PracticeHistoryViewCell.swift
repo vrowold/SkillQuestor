@@ -13,7 +13,10 @@ class PracticeHistoryViewCell: UITableViewCell {
 
     @IBOutlet weak var authorImageView:UIImageView!
     @IBOutlet weak var authorLabel:UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
 
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
