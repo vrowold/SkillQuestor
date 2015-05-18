@@ -10,18 +10,13 @@ import UIKit
 
 class ResourceController: UITableViewController {
    
+    var selectedSkill: skill = skill()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "My " + selectedSkill.name.capitalizedString
         
-        
-        
-        if self.revealViewController() != nil {
-           
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            self.revealViewController().rearViewRevealWidth = 230
-            
-        }
+      
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,48 +39,32 @@ class ResourceController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 9
+        return 5
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as NewsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ResourceViewCell
         
         // Configure the cell...
         if indexPath.row == 0 {
-            cell.authorLabel.text = "Basketball"
-            cell.authorImageView.image = UIImage(named: "basketball_icon")
+            cell.authorLabel.text = "Resources"
+            cell.authorImageView.image = UIImage(named: "skill_books")
         } else if indexPath.row == 1 {
-            cell.authorLabel.text = "Chess"
-            cell.authorImageView.image = UIImage(named: "chess_icon")
+            cell.authorLabel.text = "Practice History"
+            cell.authorImageView.image = UIImage(named: "skill_calendar")
             
         } else if indexPath.row == 2 {
-            cell.authorLabel.text = "Guitar"
-            cell.authorImageView.image = UIImage(named: "guitar_icon")
+            cell.authorLabel.text = "Goals"
+            cell.authorImageView.image = UIImage(named: "skill_goals")
             
         }else if indexPath.row == 3 {
-            cell.authorLabel.text = "Painting"
-            cell.authorImageView.image = UIImage(named: "painting_icon")
+            cell.authorLabel.text = "Journal"
+            cell.authorImageView.image = UIImage(named: "skill_journal")
             
-        }else if indexPath.row == 4 {
-            cell.authorLabel.text = "Drawing"
-            cell.authorImageView.image = UIImage(named: "drawing_icon")
+        }else{
             
-        }else if indexPath.row == 5 {
-            cell.authorLabel.text = "Tennis"
-            cell.authorImageView.image = UIImage(named: "tennis_icon")
-            
-        }else if indexPath.row == 6 {
-            cell.authorLabel.text = "Soccer"
-            cell.authorImageView.image = UIImage(named: "soccer_icon")
-            
-        }else if indexPath.row == 7 {
-            cell.authorLabel.text = "Bowling"
-            cell.authorImageView.image = UIImage(named: "bowling_icon")
-            
-        }else {
-            
-            cell.authorLabel.text = "Billiards"
+            cell.authorLabel.text = "Practice now"
             cell.authorImageView.image = UIImage(named: "pool_icon")
             
         }
@@ -128,14 +107,26 @@ class ResourceController: UITableViewController {
     }
     */
     
-    /*
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "Goals") {
+            let navVC = segue.destinationViewController as UINavigationController
+            let destinationVC = navVC.topViewController as GoalsViewController
+            
+            let goalArray = ModelManager.instance.getGoals(selectedSkill)
+            
+          
+            destinationVC.goalTextArray = goalArray
+            
+            
+        }
     }
-    */
+*/
+
     
 }

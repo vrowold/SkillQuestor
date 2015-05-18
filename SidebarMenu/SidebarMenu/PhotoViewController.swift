@@ -12,7 +12,9 @@ class PhotoViewController: UIViewController {
     
     var timer = NSTimer()
     var startTime = NSTimeInterval()
-    var data = String()
+    var data: String = "hjkdfshjklsdgfhj"
+    var data2: UInt8 = 0
+    var skillT: skill = skill()
     
     @IBOutlet weak var skillLabel: UILabel!
 
@@ -22,7 +24,7 @@ class PhotoViewController: UIViewController {
     @IBOutlet var displayTimeLabel: UILabel!
 
     @IBAction func start(sender: AnyObject) {
-        
+        timer.fire()
         if !timer.valid {
             let aSelector : Selector = "updateTime"
             timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
@@ -32,6 +34,11 @@ class PhotoViewController: UIViewController {
     }
     
     @IBAction func stop(sender: AnyObject) {
+        var stoppedTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        //Find the difference between current time and start time.
+        var totalTime: NSTimeInterval = stoppedTime - startTime
+        
         
         timer.invalidate()
         
@@ -40,7 +47,7 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.skillLabel.text = self.data
+        skillLabel.text = data + " Session"
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -65,6 +72,7 @@ class PhotoViewController: UIViewController {
         //calculate the minutes in elapsed time.
         let minutes = UInt8(elapsedTime / 60.0)
         elapsedTime -= (NSTimeInterval(minutes) * 60)
+        data2 = minutes
         
         //calculate the seconds in elapsed time.
         let seconds = UInt8(elapsedTime)
@@ -83,14 +91,25 @@ class PhotoViewController: UIViewController {
         displayTimeLabel.text = "\(strHours):\(strMinutes):\(strSeconds)"
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepareForSegue(segue: (UIStoryboardSegue!), sender: AnyObject!) {
+        if (segue.identifier == "Timer View") {
+            let navVC = segue.destinationViewController as! PracticeReviewViewController
+            
+            ModelManager.instance.addJournal((data2 + 1), skillObject: skillT)
+            
+            navVC.data =
+                data2 +
+            1
+            navVC.skillName = data.lowercaseString
+           
+            navVC.skillT = skillT
+            
+        }
+        
     }
-    */
+
 
 }

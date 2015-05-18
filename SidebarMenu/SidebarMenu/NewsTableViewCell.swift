@@ -11,9 +11,11 @@ import UIKit
 class NewsTableViewCell: UITableViewCell {
     
 
+    @IBOutlet weak var infoButton: UIButton!
     @IBOutlet weak var authorImageView:UIImageView!
     @IBOutlet weak var authorLabel:UILabel!
 
+    @IBOutlet weak var inButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

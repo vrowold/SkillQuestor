@@ -11,12 +11,11 @@ import UIKit
 class MySkillsViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
     
-    var dataArray: [String] = ["Basketball","Chess","Guitar","Painting","Drawing","Tennis","Soccer","Bowling"]
-
+    let skillArray = ModelManager.instance.getAllSkillNames()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -47,51 +46,21 @@ class MySkillsViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 9
+        return skillArray.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as MySkillsViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MySkillsViewCell
+        
+        var skill = skillArray[indexPath.row]
+        
+        cell.authorLabel.text = skill.name.capitalizedString
+        cell.authorImageView.image = UIImage(named: (skill.name + "_icon"))
+        
+        
+        
 
-        // Configure the cell...
-        if indexPath.row == 0 {
-            cell.authorLabel.text = "Basketball"
-            cell.authorImageView.image = UIImage(named: "basketball_icon")
-        } else if indexPath.row == 1 {
-            cell.authorLabel.text = "Chess"
-            cell.authorImageView.image = UIImage(named: "chess_icon")
-            
-        } else if indexPath.row == 2 {
-            cell.authorLabel.text = "Guitar"
-            cell.authorImageView.image = UIImage(named: "guitar_icon")
-            
-        }else if indexPath.row == 3 {
-            cell.authorLabel.text = "Painting"
-            cell.authorImageView.image = UIImage(named: "painting_icon")
-            
-        }else if indexPath.row == 4 {
-            cell.authorLabel.text = "Drawing"
-            cell.authorImageView.image = UIImage(named: "drawing_icon")
-            
-        }else if indexPath.row == 5 {
-            cell.authorLabel.text = "Tennis"
-            cell.authorImageView.image = UIImage(named: "tennis_icon")
-            
-        }else if indexPath.row == 6 {
-            cell.authorLabel.text = "Soccer"
-            cell.authorImageView.image = UIImage(named: "soccer_icon")
-            
-        }else if indexPath.row == 7 {
-            cell.authorLabel.text = "Bowling"
-            cell.authorImageView.image = UIImage(named: "bowling_icon")
-            
-        }else {
- 
-            cell.authorLabel.text = "Billiards"
-            cell.authorImageView.image = UIImage(named: "pool_icon")
-            
-        }
         return cell
     }
     
@@ -130,18 +99,27 @@ class MySkillsViewController: UITableViewController {
         return true
     }
 
-
+ 
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: (UIStoryboardSegue!), sender: AnyObject!) {
+        if (segue.identifier == "Load View") {
+            let navVC = segue.destinationViewController as! UINavigationController
+            let destinationVC = navVC.topViewController as! PhotoViewController
+            
+            let selectedIndex = self.tableView.indexPathForCell(sender as! MySkillsViewCell)
+            destinationVC.skillT = skillArray[selectedIndex!.row]
         
-            if let destinationVC = segue.destinationViewController as? PhotoViewController{
-                var indexPath = self.tableView.indexPathForSelectedRow()
-                
-                destinationVC.data = "STRINGGGGGG"//self.dataArray[indexPath!.row]
-            }
+            let cell = sender as! MySkillsViewCell
+            destinationVC.data = cell.authorLabel.text!
+           
+            
+            
+        }
+        
+        
     }
     
 

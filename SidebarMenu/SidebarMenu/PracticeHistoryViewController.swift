@@ -11,7 +11,8 @@ import UIKit
 class PracticeHistoryViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
 
-  
+  let skillArray = ModelManager.instance.getAllJournals()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,13 +47,21 @@ class PracticeHistoryViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 9
+        return skillArray.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PracticeHistoryViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PracticeHistoryViewCell
 
+        var skill = skillArray[indexPath.row]
+        
+        cell.authorLabel.text = skill.iconprefix.capitalizedString
+        cell.authorImageView.image = UIImage(named: (skill.iconprefix + "_icon"))
+        cell.timeLabel.text = String(skill.time) + " min"
+        cell.dateLabel.text = skill.entry
+        
+        /*
         // Configure the cell...
         if indexPath.row == 0 {
             cell.authorLabel.text = "Guitar"
@@ -107,7 +116,7 @@ class PracticeHistoryViewController: UITableViewController {
             cell.dateLabel.text = "3/29"
             cell.timeLabel.text = "30 min"
             
-        }
+        }*/
         return cell
     }
     
